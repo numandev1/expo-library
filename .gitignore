@@ -1,0 +1,11 @@
+.vscode/
+.idea/
+.vs/
+node_modules/
+*.DS_Store
+logs/
+dist/
+testdata/
+.nyc_output
+.idea
+test-*
