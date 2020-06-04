@@ -24,6 +24,11 @@
 ## Install globally
 
 This package requires `node >= 10`.
+before install `create-expo-library` install `watchwoman` like this
+```
+npm i -g watchwoman
+```
+then install `create-expo-library`
 
 ```bash
 npm install -g create-expo-library
