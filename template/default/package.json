@@ -7,7 +7,7 @@
   "repository": "{{repo}}",
   "main": "",
   "scripts": {
-    "start": "yarn del:watchman && yarn add:wml:watcher && wml start",
+    "start": "yarn add:wml:watcher && wml start",
     "add:wml:watcher":"watchwoman add ./  ./example/node_modules/{{name}}"
   },
   "keywords": [
