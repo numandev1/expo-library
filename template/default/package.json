@@ -1,0 +1,27 @@
+{
+  "name": "{{name}}",
+  "version": "1.0.0",
+  "description": "{{description}}",
+  "author": "{{author}}",
+  "license": "{{license}}",
+  "repository": "{{repo}}",
+  "main": "",
+  "scripts": {
+    "start": "yarn del:watchman && yarn add:wml:watcher && wml start",
+    "add:wml:watcher":"watchwoman add ./  ./example/node_modules/{{name}}"
+  },
+  "keywords": [
+   
+  ],
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*",
+    "axios": "*",
+    "expo-device": "*"
+  },
+  "devDependencies": {
+    "react": "16.12.0",
+    "react-native": "0.61.5",
+    "expo-device": "~2.1.0"
+  }
+}

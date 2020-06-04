@@ -1,3 +1,4 @@
+const handlebars = require("handlebars");
 const execa = require("execa");
 const fs = require("fs-extra");
 const globby = require("globby");
@@ -5,6 +6,14 @@ const mkdirp = require("make-dir");
 const ora = require("ora");
 const path = require("path");
 const pEachSeries = require("p-each-series");
+const pkg = require("../package");
+
+const templateBlacklist = new Set([
+  "example/public/favicon.ico",
+  "example/public/.gitignore",
+  "example/assets/icon.png",
+  ".git",
+]);
 
 module.exports = async (info) => {
   const { manager, template, name, templatePath, git } = info;
@@ -24,7 +33,6 @@ module.exports = async (info) => {
   const files = await globby(source.replace(/\\/g, "/"), {
     dot: true,
   });
-  console.log(files, "filesfiles", templatePath, template, source);
 
   {
     const promise = pEachSeries(files, async (file) => {
@@ -73,21 +81,21 @@ module.exports.copyTemplateFile = async (opts) => {
 
   const destFilePath = path.join(dest, fileRelativePath);
   const destFileDir = path.parse(destFilePath).dir;
-  console.log(fileRelativePath);
-
   await mkdirp(destFileDir);
 
   if (templateBlacklist.has(fileRelativePath)) {
     const content = fs.readFileSync(file);
     fs.writeFileSync(destFilePath, content);
   } else {
-    const template = handlebars.compile(fs.readFileSync(file, "utf8"));
-    const content = template({
-      ...info,
-      yarn: info.manager === "yarn",
-    });
+    try {
+      const template = handlebars.compile(fs.readFileSync(file, "utf8"));
+      const content = template({
+        ...info,
+        yarn: info.manager === "yarn",
+      });
 
-    fs.writeFileSync(destFilePath, content, "utf8");
+      fs.writeFileSync(destFilePath, content, "utf8");
+    } catch (error) {}
   }
 
   return fileRelativePath;

@@ -35,6 +35,7 @@
     "git-config-path": "^2.0.0",
     "github-username": "^5.0.1",
     "globby": "^11.0.1",
+    "handlebars": "^4.7.6",
     "inquirer": "^7.1.0",
     "lodash": "^4.17.15",
     "mocha": "^7.1.1",
