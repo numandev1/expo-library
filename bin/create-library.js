@@ -12,6 +12,7 @@ const templateBlacklist = new Set([
   "example/public/favicon.ico",
   "example/public/.gitignore",
   "example/assets/icon.png",
+  "example/assets/splash.png",
   ".git",
 ]);
 
