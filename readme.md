@@ -5,22 +5,6 @@
 [![NPM](https://img.shields.io/npm/v/create-expo-library.svg)](https://www.npmjs.com/package/create-expo-library) [![Build Status](https://travis-ci.com/transitive-bullshit/create-expo-library.svg?branch=master)](https://travis-ci.com/transitive-bullshit/create-expo-library) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 
-## Features
-
-- Easy-to-use CLI
-- Handles all modern JS features
-- Bundles `commonjs` and `es` module formats
-- [create-expo-app](https://github.com/facebookincubator/create-expo-app) for example usage and local dev
-- [Rollup](https://rollupjs.org/) for bundling
-- [Babel](https://babeljs.io/) for transpiling
-- [Jest](https://facebook.github.io/jest/) for testing
-- Supports complicated peer-dependencies
-- Supports CSS modules
-- Optional support for TypeScript
-- Sourcemap creation
-- Thousands of public modules created
-- Thorough documentation :heart_eyes:
-
 ## Install globally
 
 This package requires `node >= 10`.
