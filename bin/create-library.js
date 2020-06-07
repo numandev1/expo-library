@@ -9,11 +9,11 @@ const pEachSeries = require("p-each-series");
 const pkg = require("../package");
 
 const templateBlacklist = new Set([
-  "example/public/favicon.ico",
-  "example/public/.gitignore",
   "example/assets/icon.png",
   "example/assets/splash.png",
+  "example/.DS_Store",
   ".git",
+  ".DS_Store"
 ]);
 
 module.exports = async (info) => {
@@ -83,12 +83,11 @@ module.exports.copyTemplateFile = async (opts) => {
   const destFilePath = path.join(dest, fileRelativePath);
   const destFileDir = path.parse(destFilePath).dir;
   await mkdirp(destFileDir);
-
   if (templateBlacklist.has(fileRelativePath)) {
     const content = fs.readFileSync(file);
     fs.writeFileSync(destFilePath, content);
   } else {
-    try {
+    console.log(file,"filefile")
       const template = handlebars.compile(fs.readFileSync(file, "utf8"));
       const content = template({
         ...info,
@@ -96,7 +95,6 @@ module.exports.copyTemplateFile = async (opts) => {
       });
 
       fs.writeFileSync(destFilePath, content, "utf8");
-    } catch (error) {}
   }
 
   return fileRelativePath;

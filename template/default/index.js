@@ -1,16 +1,23 @@
-import React, { Component } from 'react'
-import { Text, StyleSheet, View } from 'react-native';
+import React, { Component } from "react";
+import { Text, StyleSheet, View } from "react-native";
 
-class App extends Component {
+class ExampleComponent extends Component {
   render() {
+    const { text } = this.props;
     return (
-      <View>
-        <Text> Test </Text>
+      <View style={styles.container}>
+        <Text>{text}</Text>
       </View>
-    )
+    );
   }
 }
 
-export default App;
+export { ExampleComponent };
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  container:{
+    flex:1,
+    justifyContent:"center",
+    alignItemsL:"center"
+  }
+});

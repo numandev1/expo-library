@@ -73,7 +73,7 @@ module.exports = async () => {
 Your module has been created at ${dest}.
 To get started, in one tab, run:
 $ ${chalk.cyan(`cd ${params.name} && ${params.manager} start`)}
-And in another tab, run the create-expo-app dev server:
+And in another tab, run the expo start :
 $ ${chalk.cyan(
     `cd ${path.join(params.name, 'example')} && ${params.manager} start`
   )}

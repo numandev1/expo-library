@@ -5,7 +5,7 @@ class ExampleComponent extends Component {
   render() {
     const { text } = this.props;
     return (
-      <View>
+      <View style={styles.container}>
         <Text>{text}</Text>
       </View>
     );
@@ -14,4 +14,10 @@ class ExampleComponent extends Component {
 
 export { ExampleComponent };
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  container:{
+    flex:1,
+    justifyContent:"center",
+    alignItemsL:"center"
+  }
+});
