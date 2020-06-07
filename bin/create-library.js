@@ -87,7 +87,6 @@ module.exports.copyTemplateFile = async (opts) => {
     const content = fs.readFileSync(file);
     fs.writeFileSync(destFilePath, content);
   } else {
-    console.log(file,"filefile")
       const template = handlebars.compile(fs.readFileSync(file, "utf8"));
       const content = template({
         ...info,
