@@ -5,6 +5,12 @@
 [![NPM](https://img.shields.io/npm/v/expo-library.svg)](https://www.npmjs.com/package/expo-library) [![Build Status](https://travis-ci.com/transitive-bullshit/expo-library.svg?branch=master)](https://travis-ci.com/transitive-bullshit/expo-library) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 
+## Intro
+
+<p align="center">
+  <img width="600" src="https://raw.githubusercontent.com/nomi9995/expo-library/master/media/demo.gif">
+</p>
+
 ## Install globally
 
 This package requires `node >= 10`.
