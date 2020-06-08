@@ -19,12 +19,12 @@ Trace:
 
 npm manifest: 
   {
-    "name": "create-expo-library",
+    "name": "expo-library",
     "version": "1.0.0",
     "description": "",
     "main": "build/index.js",
     "bin": {
-      "tebuilder": "bin/create-expo-library.js"
+      "tebuilder": "bin/expo-library.js"
     },
     "publishConfig": {
       "access": "public"
@@ -68,7 +68,7 @@ npm manifest:
     },
     "repository": {
       "type": "git",
-      "url": "git+https://github.com/nomi9995/create-expo-library.git"
+      "url": "git+https://github.com/nomi9995/expo-library.git"
     },
     "keywords": [
       "expo",
@@ -77,9 +77,9 @@ npm manifest:
     "author": "numan",
     "license": "ISC",
     "bugs": {
-      "url": "https://github.com/nomi9995/create-expo-library/issues"
+      "url": "https://github.com/nomi9995/expo-library/issues"
     },
-    "homepage": "https://github.com/nomi9995/create-expo-library#readme"
+    "homepage": "https://github.com/nomi9995/expo-library#readme"
   }
 
 yarn manifest: 

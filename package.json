@@ -1,10 +1,10 @@
 {
-  "name": "create-expo-library",
+  "name": "expo-library",
   "version": "1.0.0",
   "description": "",
   "main": "build/index.js",
   "bin": {
-    "create-expo-library": "bin/index.js"
+    "expo-library": "bin/index.js"
   },
   "publishConfig": {
     "access": "public"
@@ -60,7 +60,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nomi9995/create-expo-library.git"
+    "url": "git+https://github.com/nomi9995/expo-library.git"
   },
   "keywords": [
     "expo",
@@ -69,7 +69,7 @@
   "author": "numan",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/nomi9995/create-expo-library/issues"
+    "url": "https://github.com/nomi9995/expo-library/issues"
   },
-  "homepage": "https://github.com/nomi9995/create-expo-library#readme"
+  "homepage": "https://github.com/nomi9995/expo-library#readme"
 }

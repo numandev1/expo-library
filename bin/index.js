@@ -14,7 +14,7 @@ module.exports = async () => {
   const defaults = await getDefaultLibraryParams()
 
   program
-    .name('create-expo-library')
+    .name('expo-library')
     .version(version)
     .usage('[options] [package-name]')
     .option('-d, --desc <string>', 'package description')

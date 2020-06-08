@@ -10,7 +10,7 @@ const config = require('./config')
 module.exports = async () => {
   const defaults = {
     name: '',
-    description: 'Made with create-expo-library',
+    description: 'Made with expo-library',
     author: config.get('author'),
     repo: (info) => `${info.author}/${info.name}`,
     license: config.get('license', 'MIT'),

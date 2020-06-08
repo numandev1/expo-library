@@ -2,4 +2,4 @@
 
 const Conf = require('conf')
 
-module.exports = new Conf({ projectName: "create-expo-library" })
+module.exports = new Conf({ projectName: "expo-library" })

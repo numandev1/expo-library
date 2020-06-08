@@ -1,27 +1,27 @@
-# create-expo-library
+# expo-library
 
 > CLI for creating reusable, modern Expo libraries using [watchwoman](http://npmjs.com/package/watchwoman) and expo init.
 
-[![NPM](https://img.shields.io/npm/v/create-expo-library.svg)](https://www.npmjs.com/package/create-expo-library) [![Build Status](https://travis-ci.com/transitive-bullshit/create-expo-library.svg?branch=master)](https://travis-ci.com/transitive-bullshit/create-expo-library) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![NPM](https://img.shields.io/npm/v/expo-library.svg)](https://www.npmjs.com/package/expo-library) [![Build Status](https://travis-ci.com/transitive-bullshit/expo-library.svg?branch=master)](https://travis-ci.com/transitive-bullshit/expo-library) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 
 ## Install globally
 
 This package requires `node >= 10`.
-before install `create-expo-library` install `watchwoman` like this
+before install `expo-library` install `watchwoman` like this
 ```
 npm i -g watchwoman
 ```
-then install `create-expo-library`
+then install `expo-library`
 
 ```bash
-npm install -g create-expo-library
+npm install -g expo-library
 ```
 
 ## Creating a New Module
 
 ```bash
-create-expo-library
+expo-library
 ```
 
 Answer some basic prompts about your module, and then the CLI will perform the following steps:
