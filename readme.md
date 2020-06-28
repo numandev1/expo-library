@@ -8,7 +8,7 @@
 ## Intro
 
 <p align="center">
-  <img width="600" src="https://raw.githubusercontent.com/nomi9995/expo-library/master/media/demo.gif">
+  <img src="https://raw.githubusercontent.com/nomi9995/expo-library/master/media/demo.gif">
 </p>
 
 ## Install globally
