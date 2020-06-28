@@ -1,6 +1,6 @@
 # expo-library
 
-> CLI for creating reusable, modern Expo libraries using [watchwoman](http://npmjs.com/package/watchwoman) and expo init.
+> CLI for creating reusable, modern Expo libraries using [Monorepo expo-yarn-workspaces](https://github.com/expo/expo/tree/master/packages/expo-yarn-workspaces) and expo init.
 
 [![NPM](https://img.shields.io/npm/v/expo-library.svg)](https://www.npmjs.com/package/expo-library) [![Build Status](https://travis-ci.com/transitive-bullshit/expo-library.svg?branch=master)](https://travis-ci.com/transitive-bullshit/expo-library) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
@@ -14,17 +14,14 @@
 ## Install globally
 
 This package requires `node >= 10`.
-before install `expo-library` install `watchwoman` like this
-```
-npm i -g watchwoman
-```
-then install `expo-library`
+
+install `expo-library` by
 
 ```bash
 npm install -g expo-library
 ```
 
-## Creating a New Module
+## Creating a New Library
 
 ```bash
 expo-library
@@ -42,21 +39,16 @@ Answer some basic prompts about your module, and then the CLI will perform the f
 
 Local development is broken into two parts (ideally using two tabs).
 
-First, run `yarn start` to watch your `yourpackage` module and automatically add into `exmaple/node_modules/yourpackage` whenever you make changes.
+First, go to `root` dir of newly create library and edit component in index.js/ts file.
+
+Second, go to `example/` dir and run metro bundle by
 
 ```bash
-npm start # runs watcher of watchwoman
-```
-
-The second part will be running the `example/` create-expo-app that's linked to the local version of your module.
-
-```bash
-# (in another tab)
 cd example
 npm start # runs your expo app bundler
 ```
 
-Now, anytime you make a change to your library in `src/` or to the example app's `example/src`, `create-expo-app` will live-reload your local dev server so you can iterate on your component in real-time.
+Now, anytime you make a change to your library in `index.js` or to the example app's `example/App.js` will fresh refresh component in example.
 
 ![](https://media.giphy.com/media/14udF3WUwwGMaA/giphy.gif)
 
@@ -66,11 +58,26 @@ Now, anytime you make a change to your library in `src/` or to the example app's
 npm publish
 ```
 
-This builds `commonjs` and `es` versions of your module to `dist/` and then publishes your module to `npm`.
+Make sure that any npm modules you want as peer dependencies are properly marked as `peerDependencies` in `package.json`.
 
-Make sure that any npm modules you want as peer dependencies are properly marked as `peerDependencies` in `package.json`. The rollup config will automatically recognize them as peers and not try to bundle them in your module.
+## Contributing
 
+See the [Contributing page](CONTRIBUTING.md).
 
-## Notice
+## Contributors ✨
 
-I am looking for volunteers who would like to become active maintainers on the project. If you are interested, please shoot me a note.
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore -->
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/nomi9995"><img src="https://avatars3.githubusercontent.com/u/36044436?s=460&u=c7471cd9ccec793c7a0fccc7db475a577ff7969d&v=4" width="100px;" alt="Numan"/><br /><sub><b>Numan</b></sub></a><br /><a href="#infra-Numan" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="https://github.com/nomi9995/expo-library/commits?author=nomi9995" title="Code">💻</a></td>
+  </tr>
+</table>
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+## License
+
+Copyright (c) 2020 Nomi9995. Licensed under the MIT license.

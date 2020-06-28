@@ -1,6 +1,6 @@
 {
   "name": "expo-library",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
   "main": "build/index.js",
   "bin": {
@@ -63,8 +63,11 @@
     "url": "git+https://github.com/nomi9995/expo-library.git"
   },
   "keywords": [
+    "create",
     "expo",
-    "libarary"
+    "libarary",
+    "expo-library",
+    "create-expo-library"
   ],
   "author": "numan",
   "license": "ISC",
