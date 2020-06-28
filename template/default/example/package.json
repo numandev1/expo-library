@@ -1,6 +1,7 @@
 {
-  "name": "{{name}}-example",
-  "main": "node_modules/expo/AppEntry.js",
+  "name": "example",
+  "version": "0.0.1",
+  "main": "__generated__/AppEntry.js",
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
@@ -9,16 +10,17 @@
     "eject": "expo eject"
   },
   "dependencies": {
-    "expo": "~37.0.3",
+    "expo": "^37.0.1",
+    "expo-keep-awake": "^8.0.0",
     "react": "~16.9.0",
     "react-dom": "~16.9.0",
     "react-native": "https://github.com/expo/react-native/archive/sdk-37.0.1.tar.gz",
     "react-native-web": "~0.11.7",
-    "{{name}}": "file:.."
+    "{{name}}": "link:../"
   },
   "devDependencies": {
-    "babel-preset-expo": "~8.1.0",
-    "@babel/core": "^7.8.6"
+    "@babel/core": "^7.8.6",
+    "babel-preset-expo": "~8.1.0"
   },
   "private": true
 }

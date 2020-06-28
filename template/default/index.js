@@ -1,11 +1,11 @@
 import React, { Component } from "react";
-import { Text, StyleSheet, View } from "react-native";
+import { Text, View } from "react-native";
 
 class ExampleComponent extends Component {
   render() {
     const { text } = this.props;
     return (
-      <View style={styles.container}>
+      <View>
         <Text>{text}</Text>
       </View>
     );
@@ -13,11 +13,3 @@ class ExampleComponent extends Component {
 }
 
 export { ExampleComponent };
-
-const styles = StyleSheet.create({
-  container:{
-    flex:1,
-    justifyContent:"center",
-    alignItemsL:"center"
-  }
-});
