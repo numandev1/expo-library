@@ -58,9 +58,9 @@ module.exports = async (info) => {
     ora.promise(rootP, `Running ${manager} install in root directory`);
     await rootP;
 
-    const exampleP = module.exports.initPackageManagerExample({ dest, info });
-    ora.promise(exampleP, `Running ${manager} install in example directory`);
-    await exampleP;
+    // const exampleP = module.exports.initPackageManagerExample({ dest, info });
+    // ora.promise(exampleP, `Running ${manager} install in example directory`);
+    // await exampleP;
   }
 
   if (git) {
@@ -142,20 +142,10 @@ module.exports.initGitRepo = async (opts) => {
 # See https://help.github.com/ignore-files/ for more about ignoring files.
 # dependencies
 node_modules
-# builds
-build
-dist
-.rpt2_cache
-# misc
-.DS_Store
-.env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+yarn.lock
+package-lock.json
 `,
     "utf8"
   );

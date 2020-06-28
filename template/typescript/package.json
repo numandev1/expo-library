@@ -6,18 +6,16 @@
   "license": "{{license}}",
   "repository": "{{repo}}",
   "scripts": {
-    "start": "yarn add:watcher && watchwoman start",
-    "add:watcher":"watchwoman add ./  ./example/node_modules/{{name}} --skip-prompt"
+    "postinstall": "cd ./example && expo-yarn-workspaces postinstall"
   },
   "keywords": [
    
   ],
-  "peerDependencies": {
-    "react": "*",
-    "react-native": "*"
-  },
   "devDependencies": {
-    "react": "16.12.0",
-    "react-native": "0.61.5"
-  }
+    "expo-yarn-workspaces": "^1.2.1"
+  },
+  "workspaces": [
+    "example"
+  ],
+  "private":true
 }

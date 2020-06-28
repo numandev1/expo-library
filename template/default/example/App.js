@@ -1,7 +1,7 @@
 import React from "react";
 import { StyleSheet, View } from "react-native";
 
-import { ExampleComponent } from "mono7";
+import { ExampleComponent } from "{{name}}";
 
 const App = () => {
   return (

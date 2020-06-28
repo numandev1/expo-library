@@ -71,9 +71,11 @@ module.exports = async () => {
   const dest = await createLibrary(params)
   console.log(`
 Your module has been created at ${dest}.
-To get started, in one tab, run:
-$ ${chalk.cyan(`cd ${params.name} && ${params.manager} start`)}
-And in another tab, run the expo start :
+
+Library directory:
+$ ${chalk.cyan(`cd ${params.name}`)}
+
+To get started, run the expo start :
 $ ${chalk.cyan(
     `cd ${path.join(params.name, 'example')} && ${params.manager} start`
   )}
